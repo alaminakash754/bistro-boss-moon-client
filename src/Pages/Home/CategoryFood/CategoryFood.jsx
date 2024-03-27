@@ -13,7 +13,7 @@ import SectionTitle from '../../../components/sectionTitle/SectionTitle';
 
 const CategoryFood = () => {
     return (
-        <section>
+        <section className='mt-10'>
             <SectionTitle
             subHeading={'---From 11:00am to 10:00pm---'}
             heading={'ORDER ONLINE'}
@@ -28,28 +28,28 @@ const CategoryFood = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper mb-10"
+                className="mySwiper  mt-10 mb-4"
             >
                 <SwiperSlide>
                     <img src={img1} alt="" />
-                    <h3 className='text-2xl uppercase text-center -mt-16 shadow-slate-100 text-purple-500'>Balender</h3>
+                    <h3 className='text-2xl uppercase text-center -mt-16 shadow-slate-100 text-purple-700'>Balender</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img2} alt="" />
-                    <h3 className='text-2xl uppercase text-center -mt-16 shadow-slate-100 text-purple-500'>Baby Toys</h3>
+                    <h3 className='text-2xl uppercase text-center -mt-8 shadow-slate-100 text-purple-700'>Baby Toys</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img3} alt="" />
                     
-                    <h3 className='text-2xl uppercase text-center -mt-16 shadow-slate-100 text-purple-500'>Headphone</h3>
+                    <h3 className='text-2xl uppercase text-center -mt-8 shadow-slate-100 text-purple-700'>Headphone</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img4} alt="" />
-                    <h3 className='text-2xl uppercase text-center -mt-16 shadow-slate-100 text-purple-500'>Washing Machine</h3>
+                    <h3 className='text-2xl uppercase text-center -mt-16 shadow-slate-100 text-purple-700'>Washing Machine</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img5} alt="" />
-                    <h3 className='text-2xl uppercase text-center -mt-16 shadow-slate-100 text-purple-500'>Home Appliance</h3>
+                    <h3 className='text-2xl uppercase text-center -mt-8 shadow-slate-100 text-purple-700'>Home Appliance</h3>
                 </SwiperSlide>
 
             </Swiper>

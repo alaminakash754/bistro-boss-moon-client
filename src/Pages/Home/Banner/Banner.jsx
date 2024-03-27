@@ -1,18 +1,18 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import img1 from '../../../assets/home/01.jpg'
-import img2 from '../../../assets/home/02.jpg'
-import img3 from '../../../assets/home/03.png'
-import img4 from '../../../assets/home/04.jpg'
-import img5 from '../../../assets/home/05.png'
-import img6 from '../../../assets/home/06.png'
+import img1 from '../../../assets/home/banner.jpg'
+import img2 from '../../../assets/home/banner2.jpg'
+import img3 from '../../../assets/home/banner 08.jpg'
+import img4 from '../../../assets/home/banner 7.jpg'
+import img5 from '../../../assets/home/banner3.jpg'
+import img6 from '../../../assets/home/banner 6.jpg'
 
 
 const Banner = () => {
     return (
-        <Carousel className="text-center">
+        <Carousel  showArrows={true} className="text-center">
                 <div>
-                    <img src={img1} />
+                    <img className="" src={img1} />
                    
                 </div>
                 <div>

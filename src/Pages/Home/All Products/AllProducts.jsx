@@ -3,7 +3,7 @@ import HomeProducts from "./homeProducts/HomeProducts";
 
 const AllProducts = () => {
     return (
-        <div>
+        <div className="bg-slate-100">
             <HomeProducts></HomeProducts>
         </div>
     );

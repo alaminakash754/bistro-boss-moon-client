@@ -15,7 +15,7 @@ const CategoryFood = () => {
     return (
         <section className='mt-10'>
             <SectionTitle
-            subHeading={'---From 11:00am to 10:00pm---'}
+            subHeading={'24 Hours ready to service you'}
             heading={'ORDER ONLINE'}
             >
 

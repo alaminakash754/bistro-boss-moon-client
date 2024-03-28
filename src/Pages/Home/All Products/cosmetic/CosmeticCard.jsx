@@ -1,6 +1,6 @@
 
 
-const HomeItemCard = ({item}) => {
+const CosmeticCard = ({item}) => {
     const {name, image, category } = item;
     return (
         <div>
@@ -13,4 +13,4 @@ const HomeItemCard = ({item}) => {
     );
 };
 
-export default HomeItemCard;
+export default CosmeticCard;

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import SectionTitle from "../../../../components/sectionTitle/SectionTitle";
 import HomeItemCard from "./HomeItemCard";
 
 const HomeProducts = () => {
@@ -14,15 +13,11 @@ const HomeProducts = () => {
     },[])
     return (
         <section className="mb-14 mt-20">
-        <SectionTitle
-        heading={'FROM OUR PRODUCTS'}
-        subHeading={'---Check it out---'}
-        >
-        </SectionTitle>
+        
 
         <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-10">
             {
-                homeProducts.map(item => <HomeItemCard key={item._id} item={item}></HomeItemCard>)
+                homeProducts.slice(0,3).map(item => <HomeItemCard key={item._id} item={item}></HomeItemCard>)
             }
         </div>
        </section>

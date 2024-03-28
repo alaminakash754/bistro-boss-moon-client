@@ -16,7 +16,7 @@ const NavBar = () => {
     // }
     const navLinks = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/menu'>Our Menus</Link></li>
+        <li><Link to='/products'>Our Products</Link></li>
         <li><Link to='/order/salad'>Order Food</Link></li>
         {/* {
             user && isAdmin && <li><Link to='/dashboard/adminHome'>Dashboard</Link></li>
@@ -34,7 +34,7 @@ const NavBar = () => {
     </>
     return (
         <>
-            <div className="navbar fixed z-10 bg-opacity-30 text-white w-[1150px] bg-white">
+            <div className="navbar bg-opacity-30 text-purple w-[1150px] bg-gray-300">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

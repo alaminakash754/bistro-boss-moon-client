@@ -5,7 +5,7 @@ const HomeItemCard = ({item}) => {
     return (
         <div>
             <div className="bg-white">
-                <img className="p-2" src={image} alt="" />
+                <img className=" w-full h-[300px] rounded-t-md rounded-r-md" src={image} alt="" />
                 <h1 className="text-center">{name}</h1>
                 <h3 className="mt-3">Category: {category}</h3>
             </div>

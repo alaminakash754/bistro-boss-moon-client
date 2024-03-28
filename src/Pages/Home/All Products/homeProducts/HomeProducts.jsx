@@ -8,18 +8,19 @@ const HomeProducts = () => {
         fetch('homeProducts.json')
         .then(res => res.json())
         .then(data => {
-            setHomeProducts(data)
+            const homeItems = data.filter(item => item.category === 'HomeAppliance')
+            setHomeProducts(homeItems);
         })
     },[])
     return (
-        <section className="mb-14">
+        <section className="mb-14 mt-20">
         <SectionTitle
         heading={'FROM OUR PRODUCTS'}
         subHeading={'---Check it out---'}
         >
         </SectionTitle>
 
-        <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-5">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-10">
             {
                 homeProducts.map(item => <HomeItemCard key={item._id} item={item}></HomeItemCard>)
             }

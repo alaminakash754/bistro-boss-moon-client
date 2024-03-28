@@ -1,24 +1,18 @@
-import { useEffect, useState } from "react";
+
 import ToyCard from "./ToyCard";
+import useItemProducts from "../../../../Hooks/useItemProducts";
 
 
 const ToyProducts = () => {
-    const [toyProducts, setToyProducts] = useState([])
-    useEffect(() => {
-        fetch('homeProducts.json')
-        .then(res => res.json())
-        .then(data => {
-            const toyItems = data.filter(item => item.category === 'Baby Toys')
-            setToyProducts(toyItems);
-        })
-    },[])
+    const [products] = useItemProducts();
+    const toyItems = products.filter(item => item.category === 'Baby Toys')
     return (
         <section className="mb-14">
         
 
         <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-10">
             {
-                toyProducts.slice(0,3).map(item => <ToyCard key={item._id} item={item}></ToyCard>)
+                toyItems.slice(0,3).map(item => <ToyCard key={item._id} item={item}></ToyCard>)
             }
         </div>
        </section>

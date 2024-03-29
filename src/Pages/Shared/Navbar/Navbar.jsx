@@ -1,24 +1,38 @@
 // import { useContext } from "react";
+import { FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import useCart from "../../../Hooks/useCart";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProviders";
 // import { AuthContext } from "../../../Providers/AuthProvider";
 // import { FaCartPlus } from 'react-icons/fa';
 // import UseCart from "../../../Hooks/UseCart";
 // import UseAdmin from "../../../Hooks/UseAdmin";
 
 const NavBar = () => {
-    // const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     // const [isAdmin] = UseAdmin();
-    // const [cart] = UseCart();
-    // const handleLogOut = () => {
-    //     logOut()
-    //         .then(() => { })
-    //         .catch(error => console.log(error))
-    // }
+    const [cart] = useCart();
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
     const navLinks = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/products'>Our Products</Link></li>
         <li><Link to='/order/salad'>Order Food</Link></li>
         <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/signup'>SignUp</Link></li>
+        <li>
+            <Link to='/'>
+                <button className="btn btn-sm">
+                    <FaCartShopping className="mr-2" />
+                    <div className="badge badge-secondary">+{cart.length}</div>
+                </button>
+            </Link>
+        </li>
+
         {/* {
             user && isAdmin && <li><Link to='/dashboard/adminHome'>Dashboard</Link></li>
         }
@@ -53,7 +67,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* {
+                    {
                         user ?
                             <>
                                 <h3 className="mr-5">{user.displayName
@@ -64,7 +78,7 @@ const NavBar = () => {
                             </>
                             :
                             <Link to='/login'><button className="btn btn-sm">Login</button></Link>
-                    } */}
+                    }
 
                 </div>
             </div>

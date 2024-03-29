@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home/Home";
 import ShowAllProducts from "../Pages/showAllProducts/ShowAllProducts";
 import EachProductDetails from "../Pages/showAllProducts/EachProductDetails";
 import Login from "../Pages/login/Login";
+import SignUp from "../Pages/Shared/signup/SignUp";
 
  export const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ import Login from "../Pages/login/Login";
                 path:'/login',
                 element: <Login></Login>
             },
+            {
+                path:'/signup',
+                element: <SignUp></SignUp>
+            }
         ]
     }
 ])

@@ -1,14 +1,10 @@
-// import { useContext } from "react";
-import { FaCartPlus, FaCartShopping } from "react-icons/fa6";
+
+import {  FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import useCart from "../../../Hooks/useCart";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import useAdmin from "../../../Hooks/useAdmin";
-// import { AuthContext } from "../../../Providers/AuthProvider";
-// import { FaCartPlus } from 'react-icons/fa';
-// import UseCart from "../../../Hooks/UseCart";
-// import UseAdmin from "../../../Hooks/UseAdmin";
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);

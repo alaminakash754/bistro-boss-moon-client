@@ -1,17 +1,31 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import useCart from "../Hooks/useCart";
 import { FaProductHunt, FaUser, FaCalculator, FaCartPlus, FaAddressBook, FaList } from "react-icons/fa6";
+import { RiLogoutCircleFill } from "react-icons/ri";
 import { IoIosHome } from "react-icons/io";
 import useAdmin from "../Hooks/useAdmin";
+import useAuth from "../Hooks/useAuth";
 
 const DashBoard = () => {
+    const { logOut } = useAuth();
     const [cart] = useCart();
     const [isAdmin] = useAdmin();
+    const navigate = useNavigate();
+
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+                navigate('/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
     
     return (
         <div className="flex">
             {/* dashboard side bar  */}
-            <div className="w-64 min-h-screen bg-orange-400">
+            <div className="w-64 min-h-screen bg-purple-400">
                 <ul className="menu">
                     {
                         isAdmin ? <>
@@ -22,6 +36,7 @@ const DashBoard = () => {
 
                             <div className="divider"></div>
                             <li><NavLink to='/'><IoIosHome></IoIosHome>Home</NavLink></li>
+                            <li><button onClick={handleSignOut}><RiLogoutCircleFill></RiLogoutCircleFill> Logout</button></li>
 
                         </>
                             :
@@ -33,6 +48,7 @@ const DashBoard = () => {
 
                                 <div className="divider"></div>
                                 <li><NavLink to='/'><IoIosHome></IoIosHome>Home</NavLink></li>
+                                <li><button onClick={handleSignOut}><RiLogoutCircleFill></RiLogoutCircleFill> Logout</button></li>
 
                             </>
 

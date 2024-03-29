@@ -23,14 +23,6 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/products'>Our Products</Link></li>
         <li><Link to='/order/salad'>Order Food</Link></li>
-        <li>
-            <Link to='/'>
-                <button className="btn btn-sm">
-                    <FaCartShopping className="mr-2" />
-                    <div className="badge badge-secondary">+{cart.length}</div>
-                </button>
-            </Link>
-        </li>
 
         {
             user && isAdmin && <li><Link to='/dashboard/adminHome'>Dashboard</Link></li>
@@ -38,10 +30,10 @@ const NavBar = () => {
         {
             user && !isAdmin && <li><Link to='/dashboard/userHome'>Dashboard</Link></li>
         }
-        {/* <li><Link to='/dashboard/cart'><button className="btn">
-        <FaCartPlus className="mr-2"></FaCartPlus>
+        <li><Link to='/dashboard/cart'><button className="btn btn-sm">
+        <FaCartShopping className="mr-2"></FaCartShopping>
             <div className="badge badge-secondary">+{cart.length}</div>
-        </button></Link></li> */}
+        </button></Link></li>
 
 
 

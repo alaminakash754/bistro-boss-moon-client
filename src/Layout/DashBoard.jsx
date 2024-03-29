@@ -1,12 +1,13 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../Hooks/useCart";
-import { FaProductHunt, FaUser, FaCalculator, FaCartPlus, FaAddressBook, FaList  } from "react-icons/fa6";
+import { FaProductHunt, FaUser, FaCalculator, FaCartPlus, FaAddressBook, FaList } from "react-icons/fa6";
 import { IoIosHome } from "react-icons/io";
+import useAdmin from "../Hooks/useAdmin";
 
 const DashBoard = () => {
     const [cart] = useCart();
-    // const [isAdmin] = UseAdmin();
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
+    
     return (
         <div className="flex">
             {/* dashboard side bar  */}
@@ -21,7 +22,7 @@ const DashBoard = () => {
 
                             <div className="divider"></div>
                             <li><NavLink to='/'><IoIosHome></IoIosHome>Home</NavLink></li>
-                            
+
                         </>
                             :
                             <>
@@ -32,7 +33,7 @@ const DashBoard = () => {
 
                                 <div className="divider"></div>
                                 <li><NavLink to='/'><IoIosHome></IoIosHome>Home</NavLink></li>
-                                
+
                             </>
 
                     }

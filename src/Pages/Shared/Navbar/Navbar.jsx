@@ -1,9 +1,10 @@
 // import { useContext } from "react";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartPlus, FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import useCart from "../../../Hooks/useCart";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
+import useAdmin from "../../../Hooks/useAdmin";
 // import { AuthContext } from "../../../Providers/AuthProvider";
 // import { FaCartPlus } from 'react-icons/fa';
 // import UseCart from "../../../Hooks/UseCart";
@@ -11,7 +12,7 @@ import { AuthContext } from "../../../Providers/AuthProviders";
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-    // const [isAdmin] = UseAdmin();
+    const [isAdmin] = useAdmin();
     const [cart] = useCart();
     const handleLogOut = () => {
         logOut()
@@ -22,7 +23,6 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/products'>Our Products</Link></li>
         <li><Link to='/order/salad'>Order Food</Link></li>
-        <li><Link to='/dashboard/users'>Dashboard</Link></li>
         <li>
             <Link to='/'>
                 <button className="btn btn-sm">
@@ -32,13 +32,13 @@ const NavBar = () => {
             </Link>
         </li>
 
-        {/* {
+        {
             user && isAdmin && <li><Link to='/dashboard/adminHome'>Dashboard</Link></li>
         }
         {
             user && !isAdmin && <li><Link to='/dashboard/userHome'>Dashboard</Link></li>
         }
-        <li><Link to='/dashboard/cart'><button className="btn">
+        {/* <li><Link to='/dashboard/cart'><button className="btn">
         <FaCartPlus className="mr-2"></FaCartPlus>
             <div className="badge badge-secondary">+{cart.length}</div>
         </button></Link></li> */}

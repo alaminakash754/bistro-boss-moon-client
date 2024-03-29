@@ -22,8 +22,8 @@ import EachProductDetails from "../Pages/showAllProducts/EachProductDetails";
             {
                 path:'/productDetails/:id',
                 element: <EachProductDetails></EachProductDetails>,
-                loader: () => fetch('/homeProducts.json')
-            }
+                loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+            },
         ]
     }
 ])

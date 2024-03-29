@@ -7,6 +7,8 @@ import ShowAllProducts from "../Pages/showAllProducts/ShowAllProducts";
 import EachProductDetails from "../Pages/showAllProducts/EachProductDetails";
 import Login from "../Pages/login/Login";
 import SignUp from "../Pages/Shared/signup/SignUp";
+import DashBoard from "../Layout/DashBoard";
+import AllUsers from "../Pages/Dashboard/Allusers/AllUsers";
 
  export const router = createBrowserRouter([
     {
@@ -35,5 +37,15 @@ import SignUp from "../Pages/Shared/signup/SignUp";
                 element: <SignUp></SignUp>
             }
         ]
+    }, 
+    {
+        path: '/dashboard',
+      element: <DashBoard></DashBoard>,
+      children: [
+        {
+            path:'users',
+            element: <AllUsers></AllUsers>
+          },
+      ]
     }
 ])

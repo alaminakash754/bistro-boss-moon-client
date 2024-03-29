@@ -22,8 +22,7 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/products'>Our Products</Link></li>
         <li><Link to='/order/salad'>Order Food</Link></li>
-        <li><Link to='/login'>Login</Link></li>
-        <li><Link to='/signup'>SignUp</Link></li>
+        <li><Link to='/dashboard/users'>Dashboard</Link></li>
         <li>
             <Link to='/'>
                 <button className="btn btn-sm">

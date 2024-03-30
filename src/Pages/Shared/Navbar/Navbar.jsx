@@ -18,7 +18,6 @@ const NavBar = () => {
     const navLinks = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/products'>Our Products</Link></li>
-        <li><Link to='/order/salad'>Order Food</Link></li>
 
         {
             user && isAdmin && <li><Link to='/dashboard/adminHome'>Dashboard</Link></li>

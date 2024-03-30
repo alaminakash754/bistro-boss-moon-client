@@ -30,9 +30,10 @@ const DashBoard = () => {
                     {
                         isAdmin ? <>
                             <li><NavLink to='/dashboard/adminHome'><IoIosHome></IoIosHome> Admin Home</NavLink></li>
+                            <li><NavLink to='/dashboard/users'><FaUser></FaUser> All Users</NavLink></li>
                             <li><NavLink to='/dashboard/addItems'><FaProductHunt></FaProductHunt> Add Product</NavLink></li>
                             <li><NavLink to='/dashboard/manageItems'><FaList></FaList> Manage Items</NavLink></li>
-                            <li><NavLink to='/dashboard/users'><FaUser></FaUser> All Users</NavLink></li>
+                           
 
                             <div className="divider"></div>
                             <li><NavLink to='/'><IoIosHome></IoIosHome>Home</NavLink></li>
